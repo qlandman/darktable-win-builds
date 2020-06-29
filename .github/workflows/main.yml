@@ -1,13 +1,15 @@
-- name: Git Sync Action
-  uses: wei/git-sync@v2.0.0
-  with:
-    # GitHub repo slug or full clone url
-    source_repo: "https://github.com/darktable-org/darktable.git"
-    # Branch name to sync from
-    source_branch: "master"
-    # GitHub repo slug or full clone url
-    destination_repo: "https://github.com/qlandman/darktable-win-build.git"
-    # Branch name to sync to
-    destination_branch: "master"
-    # SSH key used to authenticate with git clone urls provided (optional if public or https clone url with authentication)
-    #ssh_private_key: # optional
+# File: .github/workflows/repo-sync.yml
+
+on: push
+jobs:
+  repo-sync:
+    runs-on: ubuntu-latest
+    steps:
+    - name: repo-sync
+      uses: wei/git-sync@v2
+      with:
+        source_repo: "https://github.com/darktable-org/darktable.git"
+        source_branch: "master"
+        destination_repo: "https://github.com/qlandman/darktable-win-build.git"
+        destination_branch: "master"
+        #ssh_private_key: ${{ secrets.SSH_PRIVATE_KEY }}
