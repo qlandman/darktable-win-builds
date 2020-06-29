@@ -1,0 +1,13 @@
+- name: Git Sync Action
+  uses: wei/git-sync@v2.0.0
+  with:
+    # GitHub repo slug or full clone url
+    source_repo: "https://github.com/darktable-org/darktable.git"
+    # Branch name to sync from
+    source_branch: "master"
+    # GitHub repo slug or full clone url
+    destination_repo: "https://github.com/qlandman/darktable-win-build.git"
+    # Branch name to sync to
+    destination_branch: "master"
+    # SSH key used to authenticate with git clone urls provided (optional if public or https clone url with authentication)
+    #ssh_private_key: # optional
