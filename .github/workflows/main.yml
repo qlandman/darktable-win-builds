@@ -1,5 +1,8 @@
 # File: .github/workflows/repo-sync.yml
 
+
+name: Clone Dartable Repo
+
 on: push
 jobs:
   repo-sync:
