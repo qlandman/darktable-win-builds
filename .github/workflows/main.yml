@@ -15,4 +15,4 @@ jobs:
         source_branch: "master"
         destination_repo: "https://github.com/qlandman/darktable-win-build.git"
         destination_branch: "master"
-        #ssh_private_key: ${{ secrets.SSH_PRIVATE_KEY }}
+        ssh_private_key: ${{ secrets.SSH_PRIVATE_KEY }}
